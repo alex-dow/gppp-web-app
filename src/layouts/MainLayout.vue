@@ -19,19 +19,25 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Firmware </q-item-label>
+        <q-item-label header> Navigation </q-item-label>
 
         <essential-link
-          title="View Uploaded Firmware"
+          title="Firmware"
           caption=""
           icon="view_list"
-          link="firmwares"
+          link="firmware"
         />
 
         <essential-link
-          title="Upload New Firmware"
-          icon="upload"
-          link="/firmwares/upload"
+          title="System"
+          icon="devices"
+          link="system"
+        />
+
+        <essential-link
+          title="Advanced Settings"
+          icon="settings"
+          link="settings"
         />
       </q-list>
     </q-drawer>
@@ -47,51 +53,6 @@ import { ref } from 'vue';
 import EssentialLink, {
   EssentialLinkProps,
 } from 'components/EssentialLink.vue';
-
-const essentialLinks: EssentialLinkProps[] = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
-  },
-];
 
 const leftDrawerOpen = ref(false);
 

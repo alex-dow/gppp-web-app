@@ -8,20 +8,36 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         component: () => import('pages/IndexPage.vue'),
-        name: 'home',
+        name: 'home'
       },
     ],
   },
   {
-    path: '/firmwares',
+    path: '/firmware',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       {
         path: '',
         component: () => import('pages/FirmwarePage.vue'),
-        name: 'firmwares',
+        name: 'firmware',
       },
     ],
+  },{
+    path: '/system',
+    component: () => import('pages/MainLayout.vue'),
+    children: [{
+      path: '',
+      component: () => import('pages/SystemPage.vue'),
+      name: 'system'
+    }]
+  },{
+    path: '/settings',
+    component: () => import('pages/MainLayout.vue'),
+    children: [{
+      path: '',
+      component: () => import('pages/SettingsPage.vue'),
+      name: 'settings'
+    }]
   },
 
   // Always leave this as last one,
