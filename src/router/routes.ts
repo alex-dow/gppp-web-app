@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     ],
   },{
     path: '/system',
-    component: () => import('pages/MainLayout.vue'),
+    component: () => import('layouts/MainLayout.vue'),
     children: [{
       path: '',
       component: () => import('pages/SystemPage.vue'),
@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
     }]
   },{
     path: '/settings',
-    component: () => import('pages/MainLayout.vue'),
+    component: () => import('layouts/MainLayout.vue'),
     children: [{
       path: '',
       component: () => import('pages/SettingsPage.vue'),

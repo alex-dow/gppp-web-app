@@ -18,10 +18,14 @@
       <q-toolbar>
         <q-toolbar-title>Upload Firmware</q-toolbar-title>
       </q-toolbar>
-
       <q-card-section>
-        Select the firmware file (a .hex file) to upload
-        <q-uploader url="/api/firmware/" accept=".hex" @uploaded="onUploaded" />
+        <q-uploader
+          label="Select firmware files to upload"
+          url="/api/firmware/"
+          accept=".hex, .elf, .bin, .uf2"
+          multiple
+          @uploaded="onUploaded"
+        />
       </q-card-section>
       <q-card-actions align="right">
         <q-btn flat label="Cancel" v-close-popup />

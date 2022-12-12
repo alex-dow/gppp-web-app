@@ -83,7 +83,7 @@ module.exports = configure(function (/* ctx */) {
       open: false, // opens browser window automatically,
       proxy: {
         '/api': {
-          target: 'http://localhost:5000',
+          target: 'http://192.168.1.30:5000',
           changeOrigin: true,
         },
       },
